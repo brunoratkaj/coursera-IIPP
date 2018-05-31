@@ -1,9 +1,9 @@
 # coursera-IIPP
 Projects (more complex ones) done as part of Introduction to Interactive Programming in Python course on Coursera.
+For running them use http://www.codeskulptor.org 
+
 Certificates: https://www.coursera.org/account/accomplishments/certificate/H7F7RBP76QPS
               https://www.coursera.org/account/accomplishments/certificate/2FKMN5HVR6Z5
-
-For running them use http://www.codeskulptor.org 
 
 IIPP part 1:
 
