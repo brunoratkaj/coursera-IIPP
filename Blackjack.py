@@ -243,6 +243,5 @@ frame.add_button("Stand", stand, 200)
 frame.set_draw_handler(draw)
 
 
-# get things rolling
 deal()
 frame.start()
