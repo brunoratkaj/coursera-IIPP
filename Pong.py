@@ -76,14 +76,14 @@ def draw(canvas):
     paddle2_pos += paddle2_vel
     
     if (paddle1_pos + HALF_PAD_HEIGHT) >= HEIGHT: 
-        paddle1_vel = 0
+        paddle1_pos = HEIGHT - HALF_PAD_HEIGHT
     elif (paddle1_pos - HALF_PAD_HEIGHT) <= 0:
-        paddle1_vel = 0
+        paddle1_pos = HALF_PAD_HEIGHT
         
     if (paddle2_pos + HALF_PAD_HEIGHT) >= HEIGHT:
-        paddle2_vel = 0
+        paddle2_pos = HEIGHT - HALF_PAD_HEIGHT
     elif (paddle2_pos - HALF_PAD_HEIGHT) <= 0:
-        paddle2_vel = 0
+        paddle2_pos = HALF_PAD_HEIGHT
                             
     # draw paddles
     canvas.draw_polygon([(0, paddle1_pos + HALF_PAD_HEIGHT),\
@@ -129,8 +129,14 @@ def keydown(key):
         
 def keyup(key):
     global paddle1_vel, paddle2_vel
-    paddle1_vel = 0
-    paddle2_vel = 0
+    if key == simplegui.KEY_MAP["w"]:
+        paddle1_vel = 0
+    elif key == simplegui.KEY_MAP["s"]:
+        paddle1_vel = 0
+    elif key == simplegui.KEY_MAP["up"]:
+        paddle2_vel = 0
+    elif key == simplegui.KEY_MAP["down"]:
+        paddle2_vel = 0
 def button_handler():
     new_game()
     
