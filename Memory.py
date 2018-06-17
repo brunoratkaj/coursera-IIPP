@@ -12,7 +12,6 @@ def new_game():
     random.shuffle(cards)
     turn = 0
     state = 0
-    cards_clicked = []
     exposed = [False for i in range(16)]
      
 # define event handlers
